@@ -1,5 +1,5 @@
-/* useMemo is used for optimizing the performance. it prevent to call the unnessesary calling 
-to the function. it returns the cache value of the function until the dependencies change.
+/* useMemo is used for optimizing the performance. it allows to memoize the result of a function. 
+it returns the cache value of the function's result until the dependencies change.
  */
 import React, { useMemo, useState } from "react";
 import "./Memo.css";
@@ -30,7 +30,7 @@ export const Memo = () => {
             <div className="childDiv">
                 <button onClick={incrementByOne}>IncrementByOne-{counterOne}</button>
             </div>
-            <div     className="childDiv">
+            <div className="childDiv">
                 <button onClick={incrementByTwo}>IncrementByTwo-{counterTwo}</button>
             </div>
         </div>
