@@ -7,7 +7,7 @@ import Child from "./child";
 
 export const Callback = () => {
   const [counterOne, setCounterOne] = useState(0);
-  const [counterTwo, setCounterTwo] = useState([]);
+  const [counterTwo] = useState([]);
 
   const increaseOne = () => {
     setCounterOne(counterOne+1);
