@@ -1,7 +1,7 @@
 import { useRef } from "react";
 
 const UseRefSecondEx = () => {
-    const count = useRef(0);
+    const count = useRef("start");
     // const counterHandler = () => {
     //     console.log("Am I calling from useRef");
         count.current = count.current + 1;
