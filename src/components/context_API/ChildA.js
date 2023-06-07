@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ChildB } from "./ChildB";
+import { FamilyContext } from "./Context-API";
 
 export const ChildA = () => {
+    const secret = useContext(FamilyContext);
     return (
         <div>
-            <ChildB/>
+            <p>{secret.onlyChildrenACanSee()}</p>
+            {/* <ChildB/> */}
         </div>
     );
 };

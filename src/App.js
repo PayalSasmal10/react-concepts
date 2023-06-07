@@ -5,18 +5,37 @@ import UseRefSecondEx from "./components/useRef/useRefSecondEx";
 // import Child from './components/useCallback/child';
 // import { Memo } from './components/useMemo/Memo';
 // import { UseRef } from './components/useRef/UseRef';
-// import { Parent } from './components/context_API/Parent';
+import Parent from './components/context_API/Parent';
 
 // import ParentComponent from "./components/useContext/ParentComponent";
+import { FamilyContext } from "./components/context_API/Context-API";
 
 
+
+
+const familySecret = {
+  familyName: "Sasmal Family",
+  onlyParentCanSee : () => {
+      return "The sasmals are the best.";
+  },
+  onlyChildrenACanSee : () => {
+      return "Only A can see this";
+  },
+  onlyChildrenBCanSee: () => {
+      return "Only B can see this";
+  },
+  onlyChildrenCCanSee: () => {
+      return "Only C can see this";
+  }, 
+
+};
 
 function App() {
   return (
     <div className="App">
-      {/* <UseStateExample />
-       */}
-       <UseRefSecondEx/>
+      <FamilyContext.Provider value={familySecret}>
+        <Parent/>
+      </FamilyContext.Provider>
 
     </div>
   );

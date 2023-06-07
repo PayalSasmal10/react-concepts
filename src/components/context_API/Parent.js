@@ -1,22 +1,21 @@
-import React, { createContext } from "react";
+import React, { createContext, useContext } from "react";
 import ChildA from "./ChildA";
+import { FamilyContext } from "./Context-API";
+
 
 // to avoid prop drilling.
 // create, provider, consume
 
-const data = createContext();
-const gender = createContext();
 
 const Parent = () => {
-  const name = "Payal";
-  const gender = "Female";
+  const secret = useContext(FamilyContext);
   return (
     <div>
-      <data.Provider value={name}>
-        <ChildA />
-      </data.Provider>
+      <p>{`Parent ${secret.familyName}`}</p>
+      <p>{secret.onlyParentCanSee()}</p>
+      <ChildA />
     </div>
   );
 };
 export default Parent;
-export {data};
+

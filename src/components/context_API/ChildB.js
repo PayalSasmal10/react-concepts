@@ -1,15 +1,17 @@
-import { data } from "./Parent";
+// import { data } from "./Parent";
+import ChildC from "./ChildC"
+
+import { useContext } from "react";
+import { FamilyContext } from "./Context-API";
 
 export const ChildB = () => {
+  const secret = useContext(FamilyContext);
   return (
     <>
-      <data.Consumer>
-        {(name) => {
-          return <h1>My name is {name}</h1>;
-        }}
-      </data.Consumer>
+     <p>{secret.onlyChildrenBCanSee()}</p>
+     <ChildC/>
     </>
   );
 };
 
-export default ChildB;
+export default ChildB; 
