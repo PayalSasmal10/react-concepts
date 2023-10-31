@@ -15,7 +15,7 @@ export const Callback = () => {
 
   const func = useCallback(() => {
     console.log("I am Payal");
-  }, counterTwo);
+  }, [counterTwo]);
 
   return (
     <div>
