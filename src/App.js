@@ -50,8 +50,6 @@ function App() {
     setCounter1(counter2 => counter2 + 1);
   }, [counter2]);
 
-  const 
-
   return (
     <div className="App">
       {/* <FamilyContext.Provider value={familySecret}>
